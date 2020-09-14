@@ -13,11 +13,21 @@ header {
 
 nav {
     position: fixed;
-    top: 0;
+    top: 20px;
 }
 nav a {
     color: white;
+    font-size: 20px;
 }
+.navbar-toggler {
+    font-size: 12px;
+    color: white;
+}
+.nav-brand span {
+    opacity: 70%;
+    font-size: .8em;
+}
+
 nav a:hover {
     text-decoration: none;
 }
@@ -28,22 +38,41 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
 
+}
+.centered-intro h1 {
+    font-size: 3.5em;
 }
 .centered-intro p {
     color: rgba(255,255,255,.6);
+    font-size: 1.6em;
+    padding-bottom:10px ;
+    padding-top:10px ;
+    line-height: 30px;
 }
 .centered-intro a {
     text-decoration: none;
-    padding: 5px 12px;
+    padding: 5px 10px;
 }
 .centered-intro p span {
     color: white;
 }
 
-/* add marging to rows */
+/* add margin to rows */
 .ctn{
-    margin:7% auto 5%;
+    margin:7% auto 7%;
+}
+.firstContainerpad {
+    padding-top:7% ;
+    font-size: 15px;
+}
+.firstContainerpad p {
+    font-size: 15px;
+}
+.firstContainerpad h4 {
+    font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .parallax {
@@ -60,12 +89,20 @@ nav a:hover {
 }
 .parallax p {
     opacity: 80%;
-    padding: 0 0 2rem 0;
-    width: 90%;
 }
-@media screen and (min-width:560px) {
+.overlay button .btn{
+    border-color: rgba(255,255,255,0.4);
+}
     .no-gutters  {
         padding: 5%;
+        font-size: 15px;
+    }
+    .no-gutters .col-md-4 {
+        border-left: 1px solid rgba(255,255,255,.4);
+        padding:15px 40px;
+    }
+    .overlay .no-border {
+        border-left: none;
     }
     .flx {
         margin: 130px;
@@ -74,23 +111,46 @@ nav a:hover {
         margin-right: 40px;
         margin-left: 40px;
     }
-
-
-}
+    .flx .row h4 {
+        margin-top: 15%;
+        font-weight: 600;
+    }
 @media screen and (max-width:560px) {
     header {
         height: 70vh;
+        background-size: cover;
+        filter: brightness(.8);
     } 
     .centered-intro  h1{
-        font-size: .6em;
+        font-size: 3em;
+        
     }
     .centered-intro  {
-        padding: 20px;
-        font-size: .6em;
+        padding: 35px;
+        margin-top: 20px;
+        font-size: .7em;
         height: 50vh;
+    }
+    .centered-intro p {
+        line-height: 25px;
     }
     .centered-intro a {
         width: 100%;
+    }
+    .firstContainerpad p, .firstContainerpad h4{
+        padding-top: 3%;
+    }
+    .firstContainerpad p {
+        font-size: 18px;
+    }
+    .wrap {
+        margin: 5%;
+    }
+    .ctn  .col-12 p{
+        padding-left: 10%;
+        padding-right: 10%;
+        line-height: 27px;
+        color: #999999;;
     }
     .flx {
         margin: 5%;
@@ -100,32 +160,47 @@ nav a:hover {
         padding: 0%;
     }
     .flx .row {
-        margin-bottom: 30px;
+        margin:0px 0px 30px 0px;
+    }
+    .flx .row .col-12 {
+        padding: 5%;
+    }
+    .flx .row .col-12 p {
+        padding:0px  10%;
+    }
+    .flx .row h4 {
+        font-size: 27px;
+        font-weight: 600;
     }
     .parallax {
         background-attachment: scroll;
     }
-    .no-gutters {
-        padding: 10%;
-
-    }
     
     .no-gutters  .col-md-4    {
-        border-bottom:1px solid #888 ;
-        padding-bottom: 10%;
-        margin-top: 10%;
-
-
+        border-bottom:1px solid rgba(255,255,255,0.4) ;
+        padding-bottom: 12%;
+        margin-top: 12%;
+    }
+    .overlay h4 {
+        font-size: 20px;
+    }
+    .overlay .none {
+        border-bottom: none;
+    }
+    .overlay .col-md-4{
+        border-left: none;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .no-gutters button {
-        color: white;
         width: 100%;
-        padding: 5%;
-
+    }
+    form {
+        margin:7%;
     }
     
 }
-.form-pad {
+form{
     margin-top: 7% ;
 }
 .form-pad .col-12,.form-pad .col-sm-6 {
